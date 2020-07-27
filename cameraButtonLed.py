@@ -30,4 +30,5 @@ cam_button.when_pressed = capture
 #out_button.when_pressed = sys.exit(0)
 pause()
 
+print("Ok")
 print("By!")
