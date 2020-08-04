@@ -17,7 +17,8 @@ def loadImage(fileName, inRGB = True):
 
 def showHistogram(img):
     #imgShape = img.shape
-    if len(img.shape) == 3:
+    #if len(img.shape) == 3:
+    if img.ndim == 3:
         color = ('b','g','r')
         for i,col in enumerate(color):
             histr = cv.calcHist([img],[i],None,[256],[0,256])
