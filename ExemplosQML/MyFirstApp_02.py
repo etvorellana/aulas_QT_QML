@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+
+from PySide2.QtWidgets import QApplication, QMainWindow, QLabel
+from PySide2.QtCore import Qt
 
 import sys
 
@@ -11,13 +11,16 @@ class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
 
-        self.setWindowTitle("My Awesome App")
+        # Change the title of our main window
+        self.setWindowTitle("My Awesome App") 
 
+        # add our first widget — a QLabel — to the middle of the window
         label = QLabel("THIS IS AWESOME!!!")
 
+        # We set the alignment of the widget to the centre
+        label.setAlignment(Qt.AlignCenter)
         # The `Qt` namespace has a lot of attributes to customise
         # widgets. See: http://doc.qt.io/qt-5/qt.html
-        label.setAlignment(Qt.AlignCenter)
 
         # Set the central widget of the Window. Widget will expand
         # to take up all the space in the window by default.
@@ -27,7 +30,6 @@ class MainWindow(QMainWindow):
 app = QApplication(sys.argv)
 
 window = MainWindow()
-window.show() # IMPORTANT!!!!! Windows are hidden by default.
+window.show() 
 
-# Start the event loop.
 app.exec_()

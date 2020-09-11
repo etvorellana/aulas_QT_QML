@@ -1,7 +1,5 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-
+from PySide2.QtWidgets import QApplication, QMainWindow, QLabel
+from PySide2.QtCore import Qt
 import sys
 
 
