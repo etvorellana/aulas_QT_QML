@@ -18,7 +18,7 @@ class JDaApp(QWidget):
         Inicializa a janela e mostra seu conteuda na tela
         """
 
-        self.setGeometry(100,100, 400, 300)
+        self.setGeometry(100,100, 250, 250)
         self.setWindowTitle("Crachá")
         self.displayLabels()
 
@@ -34,15 +34,16 @@ class JDaApp(QWidget):
 
         text = QLabel(self)
         text.setText("Saudações")
-        text.move(105, 15)
+        text.move(95, 15)
 
         img = "Imagens/pessoa.png"
         try:
             with open(img):
                 foto = QLabel(self)
                 pixmap = QPixmap(img)
+                pixmap = pixmap.scaled(160, 160)
                 foto.setPixmap(pixmap)
-                foto.move(25,40)
+                foto.move(45, 45)
         except FileNotFoundError:
             print("Não tem foto para o cracha!")
 

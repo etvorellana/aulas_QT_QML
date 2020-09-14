@@ -31,13 +31,13 @@ class JDaApp(QWidget):
         nome_label.move(70, 50) # localiza o label na tela
 
         self.nome_edit = QLineEdit(self)
-        self.nome_edit.setAlignment(Qt.AlignLeft) # Este é o padrão
+        self.nome_edit.setAlignment(Qt.AlignLeft)                           # Este é o padrão
         self.nome_edit.move(130, 50)
-        self.nome_edit.resize(200, 20) # mudando o tamanho da caixa de texto
+        self.nome_edit.resize(200, 20)                                      # mudando o tamanho da caixa de texto
 
         self.limpar_btn = QPushButton('Limpar', self)
         self.limpar_btn.clicked.connect(self.limparCxTxt)
-        self.limpar_btn.move(160, 110) # localizando o botão na tela
+        self.limpar_btn.move(160, 110)                                      # localizando o botão na tela
 
     def limparCxTxt(self):
         """

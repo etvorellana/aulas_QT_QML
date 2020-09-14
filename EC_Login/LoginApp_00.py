@@ -27,11 +27,11 @@ class JDaApp(QWidget):
 
         nome_label = QLabel(self)
         nome_label.setText("Não aperte o botão!!!")
-        nome_label.move(60, 30) # localiza o label na tela
+        nome_label.move(30, 30) # localiza o label na tela
 
         botao = QPushButton('Aperte aqui!', self)
         botao.clicked.connect(self.buttonClicked)
-        botao.move(80, 70) # localizando o botão na tela
+        botao.move(50, 70) # localizando o botão na tela
 
     def buttonClicked(self):
         """

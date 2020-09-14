@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
 
         # SIGNAL: The connected function will be called whenever the window
         # title is changed. The new title will be passed to the function.
-        self.windowTitleChanged.connect(self.onWindowTitleChange)
+        #self.windowTitleChanged.connect(self.onWindowTitleChange)
 
         # SIGNAL: The connected function will be called whenever the window
         # title is changed. The new title is discarded in the lambda and the
@@ -26,7 +26,7 @@ class MainWindow(QMainWindow):
         # title is changed. The new title is passed to the function
         # and replaces the default parameter. Extra data is passed from
         # within the lambda.
-        #self.windowTitleChanged.connect(lambda x: self.my_custom_fn(x, 25))
+        self.windowTitleChanged.connect(lambda x: self.my_custom_fn(x, 25))
 
         # This sets the window title which will trigger all the above signals
         # sending the new title to the attached functions or lambdas as the
