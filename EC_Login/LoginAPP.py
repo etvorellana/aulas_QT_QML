@@ -6,7 +6,7 @@ from PySide2.QtWidgets import (QApplication, QWidget, QLabel,
                                 QMessageBox)
 from PySide2.QtGui import QFont
 from PySide2.QtCore import Qt
-#from Registration import CreateNewUser 
+from Registration import CriarNovoUsr 
 
 class JDaApp(QWidget):
 
@@ -64,11 +64,11 @@ class JDaApp(QWidget):
         show_pwd_cbx.stateChanged.connect(self.showPassword)
 
         out_lbl = QLabel("não é usuário?", self)
-        out_lbl.move(70, 200) # localiza o label na tela
+        out_lbl.move(50, 200) # localiza o label na tela
 
         sigup_btn = QPushButton('registrar', self)
         sigup_btn.clicked.connect(self.criarNovo)
-        sigup_btn.move(160, 195) # localizando o botão na tela
+        sigup_btn.move(160, 190) # localizando o botão na tela
         
 
     def clickLogin(self):
@@ -119,9 +119,9 @@ class JDaApp(QWidget):
         Quando o botão for acionado, abrir nova
         janela para registrar um novo usuário
         """
-        #self.criar_novo_usuario = CreateNewUser()
-        #self.criar_novo_usuario.show()
-        pass
+        self.criar_novo_usuario = CriarNovoUsr()
+        self.criar_novo_usuario.show()
+        
 
     def closeEvent(self, event):
         """
@@ -141,3 +141,4 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = JDaApp()
     sys.exit(app.exec_())
+
