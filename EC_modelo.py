@@ -5,7 +5,7 @@ from PySide2.QtWidgets import * #Colocar aqui os componentes a ser importados
 from PySide2.QtGui import *     #Colocar aqui os componentes a ser importados
 from PySide2.QtCore import *    #Colocar aqui os componentes a ser importados
 
-
+#class NomeDaApp(QMainWindow):
 class NomeDaApp(QWidget):     #Colocar aqui o nome da app
     def __init__(self):
         super().__init__()

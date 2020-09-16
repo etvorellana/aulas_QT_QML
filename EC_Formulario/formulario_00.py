@@ -35,9 +35,9 @@ class Formulario(QWidget):
         self.total_lbl.setFont(QFont('Arial', 16))
         self.total_lbl.setAlignment(Qt.AlignRight)
 
-        list_comida = ["ovos", "mixto quente", "quijo quente", "queijo",
-                        "homus", "iogurte", "maçã", "banana", "laranja", "pão de quijo", "cenouras",
-                        " pão", "macarrão", "biscoitos", "tapioca", "batatas fritas",
+        list_comida = ["ovos", "misto quente", "queijo quente", "queijo",
+                        "homus", "iogurte", "maçã", "banana", "laranja", "pão de queijo", "cenouras",
+                        "pão", "macarrão", "biscoitos", "tapioca", "batatas fritas",
                         "café", "refrigerante", "água"]
 
         alm1_cbx = QComboBox()
