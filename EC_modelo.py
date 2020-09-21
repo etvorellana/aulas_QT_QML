@@ -33,5 +33,5 @@ class NomeDaApp(QWidget):     #Colocar aqui o nome da app
 #Executando o App
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = Pesquisa()         #Colocar aqui o nome da app
+    window = NomeDaApp()         #Colocar aqui o nome da app
     sys.exit(app.exec_())

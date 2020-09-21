@@ -2,7 +2,7 @@
 
 import sys
 from PySide2.QtWidgets import (QApplication, QWidget, QLabel, 
-                                QPushButton, QLineEdit, QCheckBox)
+                                QCheckBox)
 from PySide2.QtCore import Qt
 
 class JDaApp(QWidget):

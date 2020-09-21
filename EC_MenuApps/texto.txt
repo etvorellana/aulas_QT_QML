@@ -1,0 +1,1 @@
+Isto é um texto Para avaliar o comportamento do editor de texto que criamos

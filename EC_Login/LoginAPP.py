@@ -79,15 +79,15 @@ class JDaApp(QWidget):
         Se existe, apresenta uma mensagem e fecha o app
         Se não, mostra uma mensagem de erro
         """
-
+        #Criando um dicionario par armazenar os usuários do arquivo
         usuarios = {} 
 
         try:
             with open("usuarios.txt", 'r') as f:
                 for line in f:
                     campos = line.split(" ")
-                    username = campos[0]
-                    senha = campos[1].strip('\n')
+                    username = campos[-2]
+                    senha = campos[-1].strip('\n')
                     usuarios[username] = senha                
         except FileNotFoundError:
             print("O arquivo de usuários (usuarios.txt) não foi encontrado.")
@@ -96,11 +96,11 @@ class JDaApp(QWidget):
         username = self.nome_edit.text()
         senha = self.pwd_edit.text()
         if (username, senha) in usuarios.items():
-            QMessageBox.information(self, "Registro Ok", "Login realizado com sicesso", 
+            QMessageBox.information(self, "Registro Ok", "Login realizado com sucesso", 
                                         QMessageBox.Ok, QMessageBox.Ok)
             self.close()
         else: 
-            QMessageBox.warning(self, "Problemas!", "Senha o nome do usuário incorecto", 
+            QMessageBox.warning(self, "Problemas!", "Senha ou nome do usuário incorecto", 
                                     QMessageBox.Close, QMessageBox.Close)
 
     def showPassword(self, state):

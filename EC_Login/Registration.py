@@ -100,6 +100,7 @@ class CriarNovoUsr(QWidget):
                                     QMessageBox.Close, QMessageBox.Close)
         else:
             with open("usuarios.txt", "a+") as f:
+                f.write(self.nomeC_edit.text()+ " ")
                 f.write(self.nome_edit.text() + " ")
                 f.write(pswd_text + "\n")
             self.close()

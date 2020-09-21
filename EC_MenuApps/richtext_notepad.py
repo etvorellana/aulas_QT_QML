@@ -172,8 +172,8 @@ class Notepad(QMainWindow):
                 selection.cursor = self.tedit.textCursor()
                 extra.append(selection)
             
-            for i in extra_selections:
-                self.tedit.setExtraSelections(extra)
+            for i in extra:
+                self.tedit.setExtraSelections(i)
 
     def saveToFile(self):
         """

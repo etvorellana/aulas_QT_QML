@@ -1,0 +1,1 @@
+Texto exemplo apara avaliar o comportamento do Notepad.
