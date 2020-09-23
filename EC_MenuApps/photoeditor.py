@@ -295,7 +295,7 @@ class PhotoEditor(QMainWindow): #Ok
         """
 
         self.dock_tools_view = QDockWidget()
-        self.dock_tools_view.setWindowTitle("Editar Ferramentas de Imagem")
+        self.dock_tools_view.setWindowTitle("Ferramentas Edição de Imagem")
         self.dock_tools_view.setAllowedAreas(Qt.LeftDockWidgetArea |
                                                 Qt.RightDockWidgetArea)
 

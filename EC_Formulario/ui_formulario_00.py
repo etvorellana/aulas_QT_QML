@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'formulario_00jnRfUU.ui'
+## Form generated from reading UI file 'formulario_00PHAHIy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.2
 ##
@@ -34,6 +34,7 @@ class Ui_Formulario(object):
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.alm1_cbx = QComboBox(Formulario)
+        self.alm1_cbx.addItem("")
         self.alm1_cbx.addItem("")
         self.alm1_cbx.addItem("")
         self.alm1_cbx.addItem("")
@@ -146,10 +147,11 @@ class Ui_Formulario(object):
         self.alm1_cbx.setItemText(15, QCoreApplication.translate("Formulario", u"caf\u00e9", None))
         self.alm1_cbx.setItemText(16, QCoreApplication.translate("Formulario", u"refrigerante", None))
         self.alm1_cbx.setItemText(17, QCoreApplication.translate("Formulario", u"\u00e1gua", None))
+        self.alm1_cbx.setItemText(18, QCoreApplication.translate("Formulario", u"Caf\u00e9 com Leite", None))
 
         self.pre1R_sbx.setSpecialValueText("")
-        self.pre1R_sbx.setPrefix("")
-        self.pre1C_sbx.setPrefix("")
+        self.pre1R_sbx.setPrefix(QCoreApplication.translate("Formulario", u"R$", None))
+        self.pre1C_sbx.setPrefix(QCoreApplication.translate("Formulario", u".", None))
         self.alm2_cbx.setItemText(0, QCoreApplication.translate("Formulario", u"ovos", None))
         self.alm2_cbx.setItemText(1, QCoreApplication.translate("Formulario", u"misto quente", None))
         self.alm2_cbx.setItemText(2, QCoreApplication.translate("Formulario", u"queijo quente", None))
@@ -169,8 +171,8 @@ class Ui_Formulario(object):
         self.alm2_cbx.setItemText(16, QCoreApplication.translate("Formulario", u"refrigerante", None))
         self.alm2_cbx.setItemText(17, QCoreApplication.translate("Formulario", u"\u00e1gua", None))
 
-        self.pre2R_sbx.setPrefix("")
-        self.pre2C_sbx.setPrefix("")
+        self.pre2R_sbx.setPrefix(QCoreApplication.translate("Formulario", u"R$", None))
+        self.pre2C_sbx.setPrefix(QCoreApplication.translate("Formulario", u".", None))
         self.total_lbl.setText(QCoreApplication.translate("Formulario", u"Total: R$", None))
     # retranslateUi
 

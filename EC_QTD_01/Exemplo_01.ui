@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>431</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="red_lbl">
+         <property name="text">
+          <string>Red</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="red_spb">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="red_vsl">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="grn_lbl">
+         <property name="text">
+          <string>Green</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="grn_spb">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="grn_vsl">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="ble_lbl">
+         <property name="text">
+          <string>Blue</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="ble_spb">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="ble_vsl">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>red_spb</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>red_vsl</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>24</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>red_vsl</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>red_spb</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>136</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grn_spb</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>grn_vsl</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>154</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grn_vsl</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>grn_spb</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ble_spb</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ble_vsl</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ble_vsl</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ble_spb</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

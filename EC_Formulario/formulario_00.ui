@@ -123,6 +123,11 @@
            <string>água</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Café com Leite</string>
+          </property>
+         </item>
         </widget>
        </item>
        <item>
@@ -131,7 +136,7 @@
           <string/>
          </property>
          <property name="prefix">
-          <string extracomment="R$"/>
+          <string extracomment="R$">R$</string>
          </property>
          <property name="maximum">
           <number>100</number>
@@ -144,7 +149,7 @@
        <item>
         <widget class="QSpinBox" name="pre1C_sbx">
          <property name="prefix">
-          <string extracomment="."/>
+          <string extracomment=".">.</string>
          </property>
         </widget>
        </item>
@@ -249,7 +254,7 @@
        <item>
         <widget class="QSpinBox" name="pre2R_sbx">
          <property name="prefix">
-          <string extracomment="R$"/>
+          <string extracomment="R$">R$</string>
          </property>
          <property name="maximum">
           <number>100</number>
@@ -259,7 +264,7 @@
        <item>
         <widget class="QSpinBox" name="pre2C_sbx">
          <property name="prefix">
-          <string extracomment="."/>
+          <string>.</string>
          </property>
         </widget>
        </item>

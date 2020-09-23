@@ -10,12 +10,6 @@ class Formulario(Ui_Formulario, QWidget):
         super(Formulario, self).__init__()
         self.setupUi(self)
 
-        self.pre1R_sbx.setPrefix("R$ ")
-        self.pre2R_sbx.setPrefix("R$ ")
-        self.pre1C_sbx.setPrefix(". ")
-        self.pre2C_sbx.setPrefix(". ")
-        
-
         self.pre1R_sbx.valueChanged.connect(self.calculaTotal)
         self.pre2R_sbx.valueChanged.connect(self.calculaTotal)
         self.pre1C_sbx.valueChanged.connect(self.calculaTotal)
