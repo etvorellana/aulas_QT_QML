@@ -3,7 +3,7 @@
 import sys
 import os
 
-from PySide2.QtWidgets import QApplication, QWidget, QCheckBox
+from PySide2.QtWidgets import QApplication, QWidget, QCheckBox, QPushButton
 from ui_dispHorarios import Ui_DispHoras
 from PySide2.QtCore import Qt, QFile
 from PySide2.QtUiTools import QUiLoader
@@ -19,11 +19,14 @@ class DispHoras(QWidget):
         self.ves_chbx = self.findChild(QCheckBox, 'ves_chbx')
         self.mat_chbx = self.findChild(QCheckBox, 'mat_chbx')
         self.not_chbx = self.findChild(QCheckBox, 'not_chbx')
+        self.fechar_btn = self.findChild(QPushButton, 'fechar_btn')
 
         # Conectar os sinais com o slot
         self.ves_chbx.stateChanged.connect(self.printToTerminal)
         self.mat_chbx.stateChanged.connect(self.printToTerminal)
         self.not_chbx.stateChanged.connect(self.printToTerminal)
+        self.fechar_btn.clicked.connect(self.close)
+
 
     #Carrega a UI utilizando o QUiLoader
     def load_ui(self):

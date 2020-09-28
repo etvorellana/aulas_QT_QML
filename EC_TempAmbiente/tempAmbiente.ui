@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>temAmbiente</class>
+ <widget class="QMainWindow" name="temAmbiente">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>959</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Monitor de Temperatura Ambiente</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QGraphicsView" name="graphicsView"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Curvas no gráfico</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="text">
+             <string>Temperatura estimada</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_2">
+            <property name="text">
+             <string>Temperatura sensor interno</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="text">
+             <string>Temperatura sensor de referência</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="text">
+             <string>Atividade do dispositivo</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Intervalo de monitoramento</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton">
+            <property name="text">
+             <string>1 hora</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_2">
+            <property name="text">
+             <string>6 horas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_3">
+            <property name="text">
+             <string>12 horas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_4">
+            <property name="text">
+             <string>24 horas</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>959</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="arqv_mnu">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="novo_act"/>
+    <addaction name="abre_act"/>
+    <addaction name="salva_act"/>
+    <addaction name="slvcm_act"/>
+    <addaction name="separator"/>
+    <addaction name="sair_act"/>
+   </widget>
+   <widget class="QMenu" name="conf_mnu">
+    <property name="title">
+     <string>Configurações</string>
+    </property>
+    <addaction name="senin_act"/>
+    <addaction name="senex_act"/>
+    <addaction name="separator"/>
+    <addaction name="mod_act"/>
+    <addaction name="ams_act"/>
+    <addaction name="log_act"/>
+   </widget>
+   <widget class="QMenu" name="ferr_mnu">
+    <property name="title">
+     <string>Ferramentas</string>
+    </property>
+    <addaction name="col_act"/>
+    <addaction name="ajs_act"/>
+    <addaction name="aval_act"/>
+   </widget>
+   <widget class="QMenu" name="ajud_mnu">
+    <property name="title">
+     <string>Ajuda</string>
+    </property>
+    <addaction name="sbre_act"/>
+   </widget>
+   <addaction name="arqv_mnu"/>
+   <addaction name="conf_mnu"/>
+   <addaction name="ferr_mnu"/>
+   <addaction name="ajud_mnu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::TopToolBarArea</set>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="novo_act"/>
+   <addaction name="abre_act"/>
+   <addaction name="salva_act"/>
+   <addaction name="slvcm_act"/>
+   <addaction name="separator"/>
+   <addaction name="sair_act"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="windowTitle">
+    <string>Ferramentas</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QSpinBox" name="int_sbt">
+         <property name="suffix">
+          <string> Horas</string>
+         </property>
+         <property name="minimum">
+          <number>6</number>
+         </property>
+         <property name="maximum">
+          <number>24</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="int_lbl">
+         <property name="text">
+          <string>Intervalo de coleta</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="col_btn">
+         <property name="text">
+          <string>Coletar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="aju_btn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Ajustar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ava_btn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Avaliar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="novo_act">
+   <property name="icon">
+    <iconset resource="images/temAmbiente.qrc">
+     <normaloff>:/Iconnes/file/filenew.png</normaloff>:/Iconnes/file/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>Novo</string>
+   </property>
+   <property name="toolTip">
+    <string>Criar um novo modelo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="abre_act">
+   <property name="icon">
+    <iconset resource="images/temAmbiente.qrc">
+     <normaloff>:/Iconnes/file/fileopen.png</normaloff>:/Iconnes/file/fileopen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="toolTip">
+    <string>Abrir modelo </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="salva_act">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Iconnes/file/filesave.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+   <property name="toolTip">
+    <string>Salvar modelo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="slvcm_act">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Iconnes/file/filesaveas.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Salvar Como</string>
+   </property>
+   <property name="toolTip">
+    <string>Salvar modelo como</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="sair_act">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Iconnes/file/fileclose.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Sair</string>
+   </property>
+   <property name="toolTip">
+    <string>Sair</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="senin_act">
+   <property name="text">
+    <string>Sensor Internos</string>
+   </property>
+   <property name="toolTip">
+    <string>Configurar sensor interno a ser utilizado</string>
+   </property>
+  </action>
+  <action name="senex_act">
+   <property name="text">
+    <string>Sensor Referência</string>
+   </property>
+   <property name="toolTip">
+    <string>Selecionar sensor de referẽncia</string>
+   </property>
+  </action>
+  <action name="mod_act">
+   <property name="text">
+    <string>Modelo</string>
+   </property>
+   <property name="toolTip">
+    <string>Selecionar modelo de ajuste</string>
+   </property>
+  </action>
+  <action name="ams_act">
+   <property name="text">
+    <string>Amostragem</string>
+   </property>
+   <property name="toolTip">
+    <string>Selecionar intervalo de amostragem de temperatura</string>
+   </property>
+  </action>
+  <action name="log_act">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Manter Log</string>
+   </property>
+   <property name="toolTip">
+    <string>Manter log de temperatura</string>
+   </property>
+  </action>
+  <action name="ajs_act">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Ajustar</string>
+   </property>
+   <property name="toolTip">
+    <string>Ajustar modelo com dados coletados</string>
+   </property>
+  </action>
+  <action name="col_act">
+   <property name="text">
+    <string>Coletar</string>
+   </property>
+   <property name="toolTip">
+    <string>Coletar dados para ajuste</string>
+   </property>
+  </action>
+  <action name="aval_act">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Avaliar</string>
+   </property>
+   <property name="toolTip">
+    <string>Coletar dados para avaliar o modelo</string>
+   </property>
+  </action>
+  <action name="sbre_act">
+   <property name="text">
+    <string>Sobre</string>
+   </property>
+   <property name="toolTip">
+    <string>Detalhes do software</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images/temAmbiente.qrc"/>
+ </resources>
+ <connections/>
+</ui>

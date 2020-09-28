@@ -1,65 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>DispHoras</class>
+ <widget class="QWidget" name="DispHoras">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>250</width>
-    <height>251</height>
+    <width>348</width>
+    <height>345</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Disponibilidade de Horário</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QCheckBox" name="ves_chbx">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>355</width>
-     <height>132</height>
+     <x>7</x>
+     <y>240</y>
+     <width>214</width>
+     <height>25</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Em quais turnos você pode trabalhar? (Verifque antes de confirmar)</string>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="mat_chbx">
-      <property name="text">
-       <string>Matutino [8:00 - 14:00]</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="ves_chbx">
-      <property name="text">
-       <string>Vespertino [14:00 - 20:00]</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="not_chbx">
-      <property name="text">
-       <string>Noturno [20:00 - 2:00]</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="text">
+    <string>Vespertino [14:00 - 20:00]</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="mat_chbx">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>209</y>
+     <width>194</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Matutino [8:00 - 14:00]</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fechar_btn">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>302</y>
+     <width>80</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fechar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="quest_lbl">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>311</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Em quais turnos você pode trabalhar? (Verifque antes de confirmar)</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="not_chbx">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>271</y>
+     <width>191</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Noturno [20:00 - 2:00]</string>
+   </property>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>fechar_btn</sender>
+   <signal>pressed()</signal>
+   <receiver>DispHoras</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>297</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

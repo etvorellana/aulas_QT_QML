@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="Iconnes">
+    <file>file/save_all.png</file>
+    <file>file/print.png</file>
+    <file>file/filesaveas.png</file>
+    <file>file/filesave.png</file>
+    <file>file/fileopen.png</file>
+    <file>file/filenew.png</file>
+    <file>file/fileimport.png</file>
+    <file>file/filecloseall.png</file>
+    <file>file/fileclose.png</file>
+  </qresource>
+</RCC>
