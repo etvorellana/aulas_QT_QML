@@ -17,7 +17,7 @@ Image {
         source: "Imagens/pinwheel.png"
         Behavior on rotation {
             NumberAnimation {
-                duration: 250
+                duration: 1000
             }
         }
     }
