@@ -25,73 +25,35 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-// properties.qml
+// button_minimalapi.qml
 
 import QtQuick 2.5
 
-Rectangle {
-    
+Item {
     id: root
+    width: label.width + 12; height: label.height + 12
 
-    width: 240
-    height: 120
+    // export button properties
+    property alias text: label.text
+    signal clicked
 
-    Text {
-        // (1) identifier
-        id: thisLabel
-
-        // (2) set x- and y-position
-        x: 24; y: 16
-
-        // (3) bind height to 2 * width
-        height: 2 * width
-
-        // (4) custom property
-        property int times: 24
-
-        // (5) property alias
-        property alias anotherTimes: thisLabel.times
-
-        // (6) set text appended by value
-        text: "Greetings " + times
-
-        // (7) font is a grouped property
-        font.family: "Ubuntu"
-        font.pixelSize: 24
-        font.bold: true
-
-        // (8) KeyNavigation is an attached property
-        KeyNavigation.tab: otherLabel
-
-        // (9) signal handler for property changes
-        //onHeightChanged: console.log('height:', height)
-        onFocusChanged: console.log('focus: changed')
-
-        // focus is need to receive key events
-        focus: true
-
-        // change color based on focus value
-        color: focus?"red":"black"
+    Rectangle {
+        anchors.fill: parent
+        color: "lightsteelblue"
+        border.color: "slategrey"
+        border.width: 2
+        radius: 8
     }
 
-
-
     Text {
-        // (1) identifier
-        id: otherLabel
-        x: 24
-        y: 64
-        text: "Other Label"
-
-        // (6) font is a grouped property
-        font.family: "Ubuntu"
-        font.pixelSize: 24
-        font.italic: true
-
-
-        // (7) Keys is a attached property
-        KeyNavigation.tab: thisLabel
-
-        color: focus?"red":"black"
+        id: label
+        anchors.centerIn: parent
+        text: "CLick Me"
+    }
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            root.clicked()
+        }
     }
 }
