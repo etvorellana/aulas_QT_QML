@@ -5,7 +5,7 @@ import QtQuick 2.5
 FocusScope {
     width: 96; height: input.height + 8
     Rectangle {
-        anchors.fill: parent
+        anchors.fill: parent 
         color: "lightsteelblue"
         border.color: "gray"
 

@@ -3,7 +3,7 @@
 import QtQuick 2.5
 
 Rectangle {
-    width: 200
+    width: 200 
     height: 80
     color: "linen"
 

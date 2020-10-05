@@ -5,7 +5,7 @@ import QtQuick 2.5
 Rectangle {
     width: 200
     height: 80
-    color: "linen"
+    color: "linen" 
 
     TextInput {
         id: input1

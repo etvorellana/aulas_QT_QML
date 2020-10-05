@@ -1,6 +1,6 @@
 // textApp_01.qml
 
-import QtQuick 2.5
+import QtQuick 2.5 
 
 Rectangle {
     width: 200

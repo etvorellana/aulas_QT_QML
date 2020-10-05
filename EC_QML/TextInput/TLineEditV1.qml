@@ -1,6 +1,6 @@
 // TLineEditV1.qml
 
-import QtQuick 2.5
+import QtQuick 2.5 
 
 Rectangle {
     width: 96; height: input.height + 12
