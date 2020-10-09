@@ -42,7 +42,7 @@ class NumberGenerator(QObject):
         return self.__max_number
 
     maxNumber = Property(int, get_max_number, set_max_number, notify=maxNumberChanged)
-    
+     
     # number
     
     numberChanged = Signal(int)

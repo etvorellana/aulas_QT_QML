@@ -12,6 +12,11 @@ Window {
     visible: true
     title: "Hello Python World!"
     
+    NumberGenerator{
+        id:numberGenerator
+        maxNumber: 99
+    }
+    
     Column {
         Flow {
             Button {

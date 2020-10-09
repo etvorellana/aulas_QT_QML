@@ -2,7 +2,7 @@ import sys
 import random
 
 from PySide2.QtGui import QGuiApplication
-from PySide2.QtQml import QQmlApplicationEngine
+from PySide2.QtQml import QQmlApplicationEngine, qmlRegisterType
 from PySide2.QtCore import QUrl
 
 from PySide2.QtCore import QObject, Signal, Slot, Property
@@ -45,7 +45,7 @@ class NumberGenerator(QObject):
     
     # number
     
-    numberChanged = Signal(int)
+    numberChanged = Signal(int) 
     
     def __set_number(self, val):
         if self.__number != val:
