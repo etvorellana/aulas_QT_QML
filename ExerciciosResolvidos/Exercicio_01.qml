@@ -103,6 +103,11 @@ Window {
             font.bold: true
             visible: root.identOk
         }
+
+        Image{
+            anchors.bottom: parent.bottom 
+            source: "image://qrcode/"
+        }
     }
 
     Button{

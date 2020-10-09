@@ -27,6 +27,6 @@ Window {
     
     Connections {
         target: root
-        onReNextNumber: numberLabel.text = number
+        onReNextNumber: numberLabel.text = number 
     }
 }

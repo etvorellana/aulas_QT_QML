@@ -35,7 +35,7 @@ class CpuLoadModel(QAbstractListModel):
             index.row() < len(self.__cpu_load) and
             index.column() == 0):
             return self.__cpu_load[index.row()]
-        else:
+        else: 
             return None
 
 if __name__ == '__main__':

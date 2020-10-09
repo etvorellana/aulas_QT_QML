@@ -4,7 +4,7 @@ import random
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine, qmlRegisterType
 from PySide2.QtCore import QUrl
-
+ 
 from PySide2.QtCore import QObject, Signal, Slot
 
 class NumberGenerator(QObject):

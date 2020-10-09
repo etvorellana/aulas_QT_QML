@@ -2,20 +2,19 @@ import sys
 
 from PySide2.QtGui import QGuiApplication, QPixmap, QPainter
 from PySide2.QtQml import QQmlApplicationEngine, qmlRegisterType
-from PySide2.QtQuick import QQuickPaintedItem
+from PySide2.QtQuick import QQuickImageProvider
 from PySide2.QtCore import QObject, Signal, Slot, Property, QUrl
 import qrcode
 from PIL.ImageQt import ImageQt
 
 
-class QRCImage(QQuickPaintedItem):
-    def __init__(self):
-        QQuickPaintedItem.__init__(self)
-        self.setRenderTarget(QQuickPaintedItem.FramebufferObject)
-        self.__data = None
+class QRCImage(QQuickImageProvider):
+    def __init__(self, data):
+        QQuickImageProvider.__init__(self, QQuickImageProvider.Pixmap)
+        self.__data = data
         self.__qrCode = None
 
-    def make_QRCode(self, data):
+    def requestPixmap(self, data):
         qr = qrcode.QRCode(
             version=1,
             error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -31,27 +30,17 @@ class QRCImage(QQuickPaintedItem):
         pixmap = pixmap.scaled(10, 10)
         return pixmap
 
-    def paint(self, painter):
-        self.__qrCode = self.make_QRCode(self.__data) 
-        print(self.__qrCode)
-        painter.drawPixmap(0,0,self.__qrCode)
-
-    def update_frame(self):
-        self.__qrCode = self.make_QRCode(self.__data) 
-        self.update() 
 
     #data 
     dataChanged = Signal(str)
 
     def set_data(self, data):
         self.__data = data
-        self.paint()
-        self.update_frame()
 
     def get_data(self):
         return self.__data
     
-    data = Property(str, set_data, get_data, notify=dataChanged)
+    data = Property(str, get_data, set_data, notify=dataChanged)
 
 class Funcionario(QObject):
     def __init__(self):
@@ -108,7 +97,8 @@ if __name__ == '__main__':
     #funcionario = Funcionario()
     #engine.rootContext().setContextProperty("funcionario", funcionario)
     qmlRegisterType(Funcionario, 'MyTools', 1, 0, 'Funcionario')
-    qmlRegisterType(QRCImage, 'MyTools', 1, 0, 'QRCImage')
+    qrcImage = QRCImage("Data")
+    engine.addImageProvider("qrcode", qrcImage)
     
     engine.load(QUrl("Exercicio_01.qml"))
     
